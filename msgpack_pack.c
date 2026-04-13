@@ -343,7 +343,7 @@ static inline void msgpack_serialize_array(smart_str *buf, zval *val, HashTable 
                 zval *data_noref, *data = zend_hash_index_find(ht, i);
 
                 if (!data) {
-                    MSGPACK_WARNING("[msgpack (%s) array index %u is not set", __FUNCTION__, i);
+                    MSGPACK_WARNING("[msgpack] (%s) array index %u is not set", __FUNCTION__, i);
                     msgpack_pack_nil(buf);
                     continue;
                 }
