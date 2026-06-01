@@ -24,11 +24,11 @@ function jobname(string $id, array $env) : string {
     return sprintf("php-%s-%s-%s", $env["PHP"], yesno($env, "debug"), yesno($env, "zts"));
 }
 $gen = include __DIR__ . "/ci/gen-matrix.php";
-$cur = "8.4";
+$cur = "8.5";
 $job = $gen->github([
 "old-matrix" => [
 // most useful for all additional versions except current
-	"PHP" => ["7.4", "8.0", "8.1", "8.2", "8.3"],
+	"PHP" => ["7.4", "8.2", "8.3", "8.4"],
 	"enable_debug" => "yes",
 	"enable_maintainer_zts" => "yes",
 	"enable_session" => "yes",
