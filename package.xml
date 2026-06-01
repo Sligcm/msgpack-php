@@ -22,9 +22,9 @@
   <email>mike@php.net</email>
   <active>yes</active>
  </lead>
- <date>2024-09-25</date>
+ <date>2026-06-01</date>
  <version>
-  <release>3.0.0</release>
+  <release>3.0.1</release>
   <api>3.0.0</api>
  </version>
  <stability>
@@ -33,13 +33,8 @@
  </stability>
  <license filesource="LICENSE">3-Clause-BSD</license>
  <notes><![CDATA[
-* Add support for PHP-8.1 Enums
-  * merges #173
-  * fixes #171
-* Add support for APCu
-  * merges #162, #93
-* Add OPT_ASSOC for roundtrip serialization of map.
-  * merges #58
+* Fix PHP-8.6v compatibility (see PR #180)
+* Fix enum support (see gh issue #181, #183 and PR #184)
  ]]></notes>
  <contents>
   <dir name="/">
@@ -194,6 +189,9 @@
     <file name="bug012.phpt" role="test" />
     <file name="bug013.phpt" role="test" />
     <file name="enum001.phpt" role="test" />
+    <file name="enum002.phpt" role="test" />
+    <file name="enum002.ser.txt" role="test" />
+    <file name="enum003.phpt" role="test" />
     <file name="issue023.phpt" role="test" />
     <file name="issue067.phpt" role="test" />
     <file name="issue067_32bit.phpt" role="test" />
@@ -209,6 +207,7 @@
     <file name="issue149.phpt" role="test" />
     <file name="issue149.ser.txt" role="test" />
     <file name="issue171.phpt" role="test" />
+    <file name="issue181.phpt" role="test" />
    </dir>
   </dir>
  </contents>
@@ -226,6 +225,27 @@
  <extsrcrelease />
  <changelog>
 
+  <release>
+  <date>2024-09-25</date>
+ <version>
+  <release>3.0.0</release>
+  <api>3.0.0</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license filesource="LICENSE">3-Clause-BSD</license>
+ <notes><![CDATA[
+* Add support for PHP-8.1 Enums
+ * merges #173
+ * fixes #171
+* Add support for APCu
+ * merges #162, #93
+* Add OPT_ASSOC for roundtrip serialization of map.
+ * merges #58
+]]></notes>
+  </release>
   <release>
    <date>2023-06-02</date>
    <version>
